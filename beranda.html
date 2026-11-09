@@ -32,34 +32,25 @@
             <b>Selamat Datang!</b> Terima kasih telah berkunjung ke beranda portofolio digital saya. Selamat menjelajahi karya dan kegiatan saya di sini.
         </font>
     </marquee>
-    <!-- Tempatkan kode audio ini di mana saja di dalam tag <body> -->
-<audio id="bgMusic" loop>
-    <!-- Ganti URL/nama file di bawah dengan file lagu .mp3 Anda -->
-    <source src="mubaron zaujaha.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung elemen audio.
-</audio>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Otomatis</title>
+    <style>
+        /* Membuat halaman benar-benar kosong dan bersih */
+        body { background: #ffffff; margin: 0; }
+    </style>
+</head>
+<body>
 
-<!-- Skrip JavaScript untuk memicu putar otomatis setelah interaksi pertama -->
-<script>
-    function playAudioOnInteraction() {
-        const audio = document.getElementById("bgMusic");
-        
-        // Memutar audio dan menghapus listener agar tidak berulang kali terpicu
-        audio.play().then(() => {
-            console.log("Audio berhasil diputar otomatis setelah interaksi.");
-            document.removeEventListener("click", playAudioOnInteraction);
-            document.removeEventListener("keydown", playAudioOnInteraction);
-            document.removeEventListener("touchstart", playAudioOnInteraction);
-        }).catch(error => {
-            console.log("Pemutaran tertunda oleh kebijakan browser:", error);
-        });
-    }
+    <!-- Atribut autoplay wajib dipasang -->
+    <audio autoplay loop>
+        <source src="mubaron zaujaha.mp3" type="audio/mpeg">
+    </audio>
 
-    // Mendengarkan interaksi pertama pengguna di dalam website (klik, ketik, atau sentuh layar)
-    document.addEventListener("click", playAudioOnInteraction);
-    document.addEventListener("keydown", playAudioOnInteraction);
-    document.addEventListener("touchstart", playAudioOnInteraction);
-</script>
+</body>
+</html>
+
 
 
     <br><br><br>
