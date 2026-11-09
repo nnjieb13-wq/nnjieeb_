@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.najiebabdurrahman.com</title>
+    
+    <style>
+        /* Reset Dasar & Pilihan Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 15px;
+        }
+
+        /* Wadah Utama (Kartu Kegiatan) dengan Animasi Masuk */
+        .activity-card {
+            width: 100%;
+            max-width: 850px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Bagian Judul Atas */
+        .activity-header {
+            text-align: center;
+            margin-bottom: 35px;
+            width: 100%;
+        }
+
+        .activity-header h1 {
+            font-size: 24px;
+            color: #1e3a8a; /* Biru tua sesuai gambar */
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .activity-header .divider {
+            width: 50px;
+            height: 4px;
+            background-color: #2563eb;
+            border-radius: 2px;
+            margin: 12px auto 0 auto;
+        }
+
+        /* Tata Letak Konten Kiri (Gambar) & Kanan (Teks) */
+        .activity-body {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        /* Frame Gambar Melengkung Lembut */
+        .activity-image-box {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            height: 220px;
+            background-color: #f1f5f9;
+        }
+
+        .activity-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-card:hover .activity-img {
+            transform: scale(1.05);
+        }
+
+        /* Bagian Detail Teks */
+        .activity-text h2 {
+            font-size: 18px;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .activity-text p {
+            font-size: 14.5px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* Footer Halaman & Area Tombol Navigasi */
+        .activity-footer {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 30px;
+            width: 100%;
+        }
+
+        /* ANIMASI TOMBOL INTERAKTIF (HOVER EFFECT) */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .btn-home .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-home:hover .icon {
+            transform: translateX(-4px);
+        }
+
+        .btn-home:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsif Layar Gawai HP */
+        @media (max-width: 650px) {
+            .activity-card { padding: 25px 20px; }
+            .activity-body { grid-template-columns: 1fr; gap: 20px; }
+            .activity-image-box { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="activity-card">
+        
+        <!-- Judul Atas -->
+        <header class="activity-header">
+            <h1>Kegiatan Najieb Abdurrahman</h1>
+            <h1>Selama Di Binbaz (Jogja) 2021-2025</h1>
+            <div class="divider"></div>
+        </header>
+
+      
+        
+  <main class="activity-body"> 
+    <div class="activity-image-box"> 
+        <!-- Gambar Logo Dentara --> 
+        <img src="dentara.jpg" alt="Logo Dentara" class="activity-img"> 
+    </div> 
+    <div class="activity-text"> 
+        <h2>Kegiatan Berorganisasi <strong>Dentara</strong></h2> 
+        <p>Dahulu saya pernah ikut latihan <strong>Dentara</strong>,disitu saya bahagia sekali...karena mengikuti organisasi tersebut,lalu saya pindah sekolah...maka dari itu saya merindukan sekali dengan latihan tersebut</p>
+</main> 
+
+<main class="activity-body"> 
+    <div class="activity-image-box"> 
+        <!-- Gambar Keseruan Bermain Air di Waterpark --> 
+        <img src="jogjabay.jpg" alt="Keseruan di Waterpark" class="activity-img"> 
+    </div> 
+    <div class="activity-text"> 
+        <h2>Kegiatan Rilah Di <strong>BINBAZ </strong><h2></h2>
+        <p>Tujuan pertama kami adalah menikmati keseruan di sebuah <strong>wahana permainan air (waterpark)</strong>. Di sana, suasana sangat ramai dan menyenangkan saat kami mencoba berbagai seluncuran dan bersantai menggunakan ban pelampung di kolam arus bersama pengunjung lainnya.</p> 
+    </div> 
+</main> 
+
+<main class="activity-body"> 
+    <div class="activity-image-box"> 
+        <!-- Gambar Pemandangan Gunung Merapi dan Bunker --> 
+        <img src="kaki gunung.jpg" alt="Pemandangan Gunung Merapi" class="activity-img"> 
+    </div> 
+    <div class="activity-text"> 
+        <h2>Kegiatan Camping sama <strong>TEMAN <strong><h2>
+        <p>Setelah puas bermain air, kami melanjutkan perjalanan menuju kawasan lereng <strong>Gunung Merapi</strong>. Kami disuguhi pemandangan puncak gunung yang megah, dikelilingi oleh hamparan batuan vulkanik sisa erupsi dan area sekitar bunker yang sarat akan sejarah alam.</p> 
+    </div> 
+</main> 
+
+<main class="activity-body"> 
+    <div class="activity-image-box"> 
+        <!-- Gambar Berenang di Umbul / Pemandian Mata Air Alami --> 
+        <img src="kolam.jpg" alt="Pemandian Mata Air Alami" class="activity-img"> 
+    </div> 
+    <div class="activity-text"> 
+        <h2>Kegiatan Jalan Jalan Bersama <strong>TEMAN </strong></h2>
+        <p>Sebagai penutup rangkaian liburan, kami mengunjungi sebuah <strong>pemandian mata air alami (umbul)</strong> yang sangat jernih. Airnya yang segar dan bening langsung kami manfaatkan untuk berenang bersama sekaligus melepas lelah setelah seharian beraktivitas di luar ruangan.</p> 
+    </div> 
+</main>
+
+        
+
+        <!-- Tombol Kembali -->
+        <footer class="activity-footer">
+            <a href="index.html" class="btn-home">
+                <span class="icon">⬅</span> Kembali ke halaman utama
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

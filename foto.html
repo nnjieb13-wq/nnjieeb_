@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Koleksi Foto - Murni Tanpa Java & CSS</title>
+</head>
+<body>
+
+    <!-- Bagian Judul Utama (Rata Tengah) -->
+    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <td align="center">
+                <h1><font face="Arial" color="#0B1A30">Koleksi Foto Terpilih</font></h1>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <!-- Animasi Teks Berjalan Bolak-Balik -->
+                <marquee behavior="alternate" direction="left" scrollamount="4" width="50%">
+                    <font face="Arial" color="#666666">
+                        <i>Galeri foto interaktif murni menggunakan animasi tabel HTML...</i>
+                    </font>
+                </marquee>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <!-- KONTEN GALERI: Struktur Grid 3 Kolom Simetris & Beranimasi -->
+    <table width="90%" align="center" border="0" cellpadding="15" cellspacing="0">
+        <tr valign="top">
+            
+            <!-- Kolom 1 (Kiri) - Gambar bergerak naik turun perlahan -->
+            <td width="33%" align="center">
+                <table width="100%" border="1" bordercolor="#CCCCCC" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td align="center">
+                            <marquee behavior="alternate" direction="up" scrollamount="2" height="250">
+                                <img src="kegiatan 1.jpg" alt="Foto Kegiatan 1" width="100%">
+                            </marquee>
+                            <p><font face="Arial" size="2"><b>Dokumentasi Kegiatan 1</b></font></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+            <!-- Kolom 2 (Tengah) -->
+            <td width="34%" align="center">
+                <table width="100%" border="1" bordercolor="#CCCCCC" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td align="center">
+                            <marquee behavior="alternate" direction="up" scrollamount="3" height="250">
+                                <img src="kegiatan 2.jpg" alt="Foto Kegiatan 2" width="100%">
+                            </marquee>
+                            <p><font face="Arial" size="2"><b>Dokumentasi Kegiatan 2</b></font></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+            <!-- Kolom 3 (Kanan) -->
+            <td width="33%" align="center">
+                <table width="100%" border="1" bordercolor="#CCCCCC" cellpadding="10" cellspacing="0">
+                    <tr>
+                        <td align="center">
+                            <marquee behavior="alternate" direction="up" scrollamount="2" height="250">
+                                <img src="kegiatan 3.jpg" alt="Foto Kegiatan 3" width="100%">
+                            </marquee>
+                            <p><font face="Arial" size="2"><b>Dokumentasi Kegiatan 3</b></font></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+    <br><br><hr><br>
+
+    <!-- BAGIAN TOMBOL KEMBALI DENGAN ANIMASI BERJALAN (100% BEBAS JAVASCRIPT) -->
+    <table width="100%" border="0">
+        <tr>
+            <td>
+                <marquee behavior="alternate" direction="left" scrollamount="5" width="100%">
+                    <!-- Menggunakan tautan statis HTML biasa, silakan ganti index.html dengan nama halaman utama Anda -->
+                    <a href="index.html">
+                        <input type="button" value="⬅️ Kembali ke Halaman Utama" size="30">
+                    </a>
+                </marquee>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.najiebabdurrahman.com</title>
+    
+    <style>
+
+        
+        /* Reset Dasar & Pilihan Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            color: #334e68;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Kontainer Utama Layout */
+        .main-card {
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: fadeInContainer 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Banner Biru Atas / Header */
+        .header-banner {
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+            color: #ffffff;
+            padding: 35px 40px;
+            text-align: center;
+        }
+
+        .header-banner p {
+            font-size: 15px;
+            opacity: 0.95;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* Pembagian Ruang Kolom Bawah (Sidebar & Konten) */
+        .content-split {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            background: #ffffff;
+        }
+
+        /* Area Navigasi Kiri */
+        .sidebar {
+            background-color: #f8fafc;
+            padding: 40px 25px;
+            border-right: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Kotak Gambar / Foto Ilustrasi */
+        .image-box {
+            width: 100%;
+            height: 150px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background-color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .main-card:hover .image-box img {
+            transform: scale(1.05);
+        }
+
+        /* Menu Link Navigasi Beranimasi */
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #486581;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-size: 14.5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* Animasi saat Menu didekati kursor */
+        .nav-menu a:hover {
+            background-color: #f0f4f8;
+            color: #1976d2;
+            transform: translateX(5px);
+        }
+
+        /* Status Menu Aktif / Beranda */
+        .nav-menu a.active {
+            background-color: #1976d2;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.25);
+        }
+
+        /* Area Konten Kanan */
+        .content-body {
+            padding: 40px;
+        }
+
+        .poem-intro {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #627d98;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        /* Kartu Utama Tampilan Puisi */
+        .poem-card {
+            background-color: #f8fafc;
+            border-left: 4px solid #1976d2;
+            border-radius: 0 20px 20px 0;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            margin-bottom: 25px;
+        }
+
+        .poem-card h2 {
+            font-size: 19px;
+            color: #102a43;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .poem-text p {
+            font-size: 15px;
+            color: #334e68;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Blok Dalil / Ayat Al-Qur'an dan Hadits */
+        .dalil-box {
+            background-color: #f0f4f8;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 15px;
+            border-left: 3px solid #627d98;
+        }
+
+        .dalil-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #102a43;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dalil-text {
+            font-size: 13.5px;
+            color: #486581;
+            line-height: 1.6;
+        }
+
+        /* Efek Animasi Masuk Keyframes */
+        @keyframes fadeInContainer {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Penyesuaian Tampilan Responsif (Mobile / HP) */
+        @media (max-width: 768px) {
+            .content-split {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 30px 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-box {
+                max-width: 200px;
+            }
+            .nav-menu {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+            }
+            .content-body {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kontainer Utama Website -->
+    <div class="main-card">
+        
+        <!-- Banner Selamat Datang Atas -->
+        <header class="header-banner">
+            <p>Saya ucapkan terima kasih atas kunjungan anda ke website saya. Pada website ini anda dapat melihat profil data diri saya dan kegiatan-kegiatan yang saya lakukan.</p>
+        </header>
+
+        <!-- Layout Split Pembagi Kolom -->
+        <div class="content-split">
+            
+            <!-- Kolom Navigasi Kiri -->
+            <aside class="sidebar">
+                <div class="image-box">
+                    <!-- Ganti dengan file gambar lokal jika ada -->
+                    <img src="puisi.png" alt="Foto Ilustrasi">
+                </div>
+                
+                <nav class="nav-menu">
+                 
+<ul>
+  <li><a href="index.html">Beranda</a></li>
+ 
+  <li><a href="data2.html">Instagram saya</a></li>
+  <li><a href="email.html">Email saya</a></li>
+</ul>
+
+                </nav>
+            </aside>
+            
+
+            <!-- Kolom Konten Kanan -->
+            <main class="content-body">
+                <div class="poem-intro">
+                    <p>Di bawah ini adalah puisi bertema Islami yang saya buat beberapa waktu lalu. Inspirasi puisi ini datang ketika saya termenung sendirian, memandang langit nan luas, dan merenungkan kebesaran Sang Pencipta.</p>
+                </div>
+
+                <!-- Blok Puisi Islami dengan Dalil -->
+                <article class="poem-card">
+                    <h2>Aku dan Penciptaku</h2>
+                    <div class="poem-text">
+                        
+                        <!-- Bait 1 -->
+                        <p>
+                            Ketika aku memandang luasnya langit<br>
+                            Jiwaku bersujud menatap keagungan-Mu<br>
+                            Di manakah aku di hadapan mahakarya-Mu?<br>
+                            Aku...
+                        </p>
+                        <div class="dalil-box">
+                            <div class="dalil-title">📖 QS. Ali 'Imran: 190</div>
+                            <div class="dalil-text">"Sesungguhnya dalam penciptaan langit dan bumi, dan pergantian malam dan siang terdapat tanda-tanda (kebesaran Allah) bagi orang yang berakal."</div>
+                        </div>
+
+                        <!-- Bait 2 -->
+                        <p>
+                            Siapakah aku tanpa rida-Mu?<br>
+                            Dari segumpal tanah aku dibentuk dan dihidupkan<br>
+                            Akankah hatiku selalu dekat dengan-Mu?<br>
+                            Aku...
+                        </p>
+                        <div class="dalil-box">
+                            <div class="dalil-title">📖 QS. As-Sajdah: 7</div>
+                            <div class="dalil-text">"Yang memperindah segala sesuatu yang Dia ciptakan dan yang memulai penciptaan manusia dari tanah."</div>
+                        </div>
+
+                        <!-- Bait 3 -->
+                        <p>
+                            Ya Rabb...<br>
+                            Begitu mulia dan agung kuasa-Mu<br>
+                            Menghamparkan bumi dan meninggikan langit tanpa tiang<br>
+                            Mengalirkan rezeki dan ampunan yang tak bertepi<br>
+                            Untuk menghidupi hamba yang fakir<br>
+                            Seperti aku.
