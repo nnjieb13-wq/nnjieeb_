@@ -24,7 +24,7 @@ const loadingAnimation = setInterval(() => {
         
         setTimeout(() => {
             // Pindah otomatis ke beranda.html di folder lokal Anda
-            window.location.href = 'index.html'; 
+            window.location.href = 'beranda.html'; 
         }, 300); // Jeda ledakan kilatan 0.3 detik
     }
 }, 30); // Durasi pemuatan otomatis berputar sekitar 3 detik
