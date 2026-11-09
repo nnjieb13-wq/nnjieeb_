@@ -1,0 +1,138 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #020205;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Kotak Badai Utama */
+.storm-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #051937 0%, #000000 100%);
+    overflow: hidden;
+}
+
+/* Latar Belakang Petir Menyambar Skala Besar */
+.lightning-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://giphy.com');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    mix-blend-mode: screen;
+    z-index: 1;
+    animation: stormFlicker 8s infinite linear;
+}
+
+/* Efek Ambient Awan Mendung/Listrik Statis */
+.thunder-ambient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+    z-index: 2;
+    animation: pulseGlow 4s infinite alternate;
+}
+
+/* Konten Box */
+.charge-box {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Judul Bertema Badai Cyber */
+.storm-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 30px #00b4d8;
+    margin-bottom: 50px;
+    animation: textVibrate 0.3s infinite alternate;
+}
+
+.storm-title span {
+    color: #00f0ff;
+    text-shadow: 0 0 20px #00f0ff, 0 0 40px #0077b6;
+}
+
+/* Bar Pengisian Daya Listrik */
+.energy-bar {
+    position: relative;
+    width: 350px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00f0ff;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    border-radius: 6px;
+    padding: 1px;
+}
+
+.energy-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #0077b6, #00f0ff, #ffffff);
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #ffffff;
+    border-radius: 4px;
+    transition: width 0.04s linear;
+}
+
+/* Percikan Cahaya Petir Berjalan */
+.spark-glow {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 10px #00f0ff, 0 0 10px 2px #ffffff;
+    pointer-events: none;
+    transition: left 0.04s linear;
+}
+
+.status-text {
+    font-size: 0.9rem;
+    color: #a3b18a;
+    font-family: monospace;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    color: #00f0ff;
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+/* --- ANIMASI KEYFRAMES --- */
+@keyframes stormFlicker {
+    0%, 95%, 98% { opacity: 0.35; }
+    96%, 99% { opacity: 0.8; filter: brightness(1.5); }
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    100% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes textVibrate {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(1px, 1px); }
+}

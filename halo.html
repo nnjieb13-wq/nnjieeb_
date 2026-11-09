@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Overload - Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container Utama Loading Screen -->
+    <div class="storm-container">
+        <!-- Efek Video/Animasi Latar Belakang Petir Skala Penuh -->
+        <div class="lightning-overlay"></div>
+        <div class="thunder-ambient"></div>
+
+        <!-- Konten Teks & Indikator Pengisian Energi -->
+        <div class="charge-box">
+            <h1 class="storm-title">Najieb_<span>Abdurrahman</span></h1>
+            
+            <div class="energy-section">
+                <!-- Bar Pengisian Energi Listrik -->
+                <div class="energy-bar">
+                    <div class="energy-fill" id="progressFill"></div>
+                    <!-- Efek Percikan Cahaya di Ujung Bar -->
+                    <div class="spark-glow" id="sparkGlow"></div>
+                </div>
+                <p class="status-text">CHARGING ENERGY: <span id="percentage">0%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript otomatisasi -->
+    <script src="script.js"></script>
+</body>
+</html>
